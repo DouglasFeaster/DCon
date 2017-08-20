@@ -9,7 +9,7 @@ Console Application for converting binary document files to text for Git Diff. A
   textconv=dcon
   prompt = false
 [alias]
-  bindiff = diff --word-diff=color --unified=1
+  docdiff = diff --word-diff=color --unified=1
 ```
 
 .gitattributes
