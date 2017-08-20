@@ -9,7 +9,7 @@ namespace DCon
     {
         static void Main(string[] args)
         {
-            if (args[0].ToUpper() == "-HELP" || args[0].ToUpper() == "-H")
+            if (HelpCommand.IsHelp(args[0]))
             {
                 HelpCommand.GetHelp();
             }
@@ -23,8 +23,7 @@ namespace DCon
             }
             else if (args[0].Contains(".pptx") || args[0].Contains(".ppt"))
             {
-
-
+                
             }
             else if (args[0].ToUpper().Contains(".PDF"))
             {

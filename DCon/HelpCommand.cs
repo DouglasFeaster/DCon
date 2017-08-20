@@ -9,6 +9,19 @@ namespace DCon
 {
     public static class HelpCommand
     {
+        public static bool IsHelp(string input)
+        {
+            if (input.ToUpper() == "-HELP" || input.ToUpper() == "-H")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
         public static void GetHelp()
         {
             //Console.WriteLine("usage: dcon [-help, -h] <inputPath>\n");

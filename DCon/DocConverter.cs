@@ -13,7 +13,7 @@ using iPDF = iTextSharp.text.pdf;
 
 namespace DCon
 {
-    class DocConverter
+    public static class DocConverter
     {
         public static void Word(string input)
         {
