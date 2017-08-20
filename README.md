@@ -2,6 +2,16 @@
 
 Console Application for converting binary document files to text for Git Diff. Add dcon directory to PATH variable.
 
+.gitconfig
+```git
+# .gitconfig file in your home directory
+[diff "dcon"]
+  textconv=dcon
+  prompt = false
+[alias]
+  bindiff = diff --word-diff=color --unified=1
+```
+
 .gitattributes
 ```git
 # .gitattributes file in root folder of your git project
@@ -36,14 +46,4 @@ Console Application for converting binary document files to text for Git Diff. A
     *.odp diff=dcon
 
     *.pdf diff=dcon
-```
-
-.gitconfig
-```git
-# .gitconfig file in your home directory
-[diff "dcon"]
-  textconv=dcon
-  prompt = false
-[alias]
-  bindiff = diff --word-diff=color --unified=1
 ```
