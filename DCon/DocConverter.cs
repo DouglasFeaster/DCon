@@ -37,7 +37,7 @@ namespace DCon
                     iPDF.parser.ITextExtractionStrategy its = new iPDF.parser.LocationTextExtractionStrategy();
                     String parseString = iPDF.parser.PdfTextExtractor.GetTextFromPage(reader, page, its);
 
-                    parseString = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
+                    parseString = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(parseString)));
                     strText = strText + parseString;
                     Console.WriteLine(strText);
                 }
