@@ -1,28 +1,33 @@
 # .gitattributes file in root folder of your git project
-*.doc   diff=sconvert
-*.DOC   diff=sconvert
+    *.docx diff=dcon
+    *.docm diff=dcon
+    *.doc diff=dcon
+    *.dotx diff=dcon
+    *.dotm diff=dcon
+    *.dot diff=dcon
+    *.rtf diff=dcon
+    *.odt diff=dcon
 
-*.docx  diff=sconvert
-*.DOCX  diff=sconvert
+    *.xlsx diff=dcon
+    *.xlsm diff=dcon
+    *.xlsb diff=dcon
+    *.xls diff=dcon
+    *.csv diff=dcon
+    *.xltx diff=dcon
+    *.xltm diff=dcon
+    *.xlt diff=dcon
+    *.ods diff=dcon 
 
-*.rtf diff=sconvert
-*.RTF diff=sconvert
+    *.pptx diff=dcon
+    *.pptm diff=dcon
+    *.ppt diff=dcon
+    *.potx diff=dcon
+    *.potm diff=dcon
+    *.pot diff=dcon
+    *.ppsx diff=dcon
+    *.ppsm diff=dcon
+    *.pps diff=dcon
+    *.odp diff=dcon
 
-*.xlsx diff=sconvert
-*.XLSX diff=sconvert
-
-*.xls diff=sconvert
-*.XLS diff=sconvert
-
-*.pdf diff=sconvert
-*.PDF diff=sconvert
-
-*.xps   diff=sconvert
-*.XPS   diff=sconvert
-
-*.odt   diff=sconvert
-*.ODT   diff=sconvert
-
-*.dot   diff=sconvert
-*.DOT   diff=sconvert
+    *.pdf diff=dcon
 
