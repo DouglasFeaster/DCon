@@ -63,11 +63,24 @@ namespace DCon
 
         public static void PowerPoint(string input)
         {
+
+            //    string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
+
+            //    Microsoft.Office.Interop.PowerPoint.Application app = new Microsoft.Office.Interop.PowerPoint.Application();
+
+            //    try
+            //    {
+            //        Microsoft.Office.Interop.PowerPoint.Presentation pres = app.Presentation.Open(doc);
+            //    }
+            //    finally
+            //    {
+            //        app.Quit();
+            //    }
         }
 
         public static void PDF(string input)
         {
-            string strText = string.Empty;
+            string doc = string.Empty;
             try
             {
                 iPDF.PdfReader reader = new iPDF.PdfReader(input);
@@ -78,8 +91,8 @@ namespace DCon
                     String parseString = iPDF.parser.PdfTextExtractor.GetTextFromPage(reader, page, its);
 
                     parseString = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(parseString)));
-                    strText = strText + parseString;
-                    Console.WriteLine(strText);
+                    doc = doc + parseString;
+                    Console.WriteLine(doc);
                 }
                 reader.Close();
 

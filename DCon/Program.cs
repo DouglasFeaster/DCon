@@ -30,19 +30,6 @@ namespace DCon
             //else if (args[0].Contains(".pptx") || args[0].Contains(".ppt"))
             //{
 
-            //    string input = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), args[0]));
-            //    string output = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), args[1]));
-
-            //    Microsoft.Office.Interop.PowerPoint.Application app = new Microsoft.Office.Interop.PowerPoint.Application();
-
-            //    try
-            //    {
-            //        Microsoft.Office.Interop.PowerPoint.Presentation pres = app.Presentation.Open(input);
-            //    }
-            //    finally
-            //    {
-            //        app.Quit();
-            //    }
 
             //}
 
