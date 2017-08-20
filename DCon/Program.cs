@@ -16,8 +16,8 @@ namespace DCon
         {
             if (args[0].ToUpper() == "-HELP" || args[0].ToUpper() == "-H")
             {
-                Console.WriteLine("usage: SConvert [-help, /help, /?] <inputPath> <outputPath>\n");
-                Console.WriteLine("example: SConvert input.docx output.txt");
+                Console.WriteLine("usage: dcon [-help, -h] <inputPath>\n");
+                Console.WriteLine("example: dcon input.docx \n dcon input.xlsx \n input.pdf");
             }
             else if (args[0].ToUpper().Contains(".DOCX") || args[0].ToUpper().Contains(".DOC") || args[0].ToUpper().Contains(".RTF") || args[0].ToUpper().Contains(".DOT") || args[0].ToUpper().Contains(".ODT"))
             {
