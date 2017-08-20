@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocs>
+  
+  <Usage>usage: dcon [-help, -h] inputPath</Usage>
+  <Example>dcon input.docx</Example>
+  <Example>dcon input.xlsx</Example>
+  <Example>dcon input.pdf</Example>
+
+</HelpDocs>
