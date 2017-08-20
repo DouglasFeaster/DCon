@@ -108,11 +108,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
-    <Content Include="helpDoc.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="HelpDocs.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="OfficeFileExt.xml" />
+    <Content Include="OfficeFileExt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
