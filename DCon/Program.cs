@@ -94,28 +94,29 @@ namespace DCon
 
                 string input = args[0];
                 //string output = args[1];
-                string strText = string.Empty;
-                try
-                {
-                    PdfReader reader = new PdfReader(input);
+                //string strText = string.Empty;
+                //try
+                //{
+                //    PdfReader reader = new PdfReader(input);
 
-                    for (int page = 1; page <= reader.NumberOfPages; page++)
-                    {
-                        iTextSharp.text.pdf.parser.ITextExtractionStrategy its = new iTextSharp.text.pdf.parser.LocationTextExtractionStrategy();
-                        String s = iTextSharp.text.pdf.parser.PdfTextExtractor.GetTextFromPage(reader, page, its);
+                //    for (int page = 1; page <= reader.NumberOfPages; page++)
+                //    {
+                //        iTextSharp.text.pdf.parser.ITextExtractionStrategy its = new iTextSharp.text.pdf.parser.LocationTextExtractionStrategy();
+                //        String s = iTextSharp.text.pdf.parser.PdfTextExtractor.GetTextFromPage(reader, page, its);
 
-                        s = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
-                        strText = strText + s;
-                        //File.WriteAllText(output, strText);
-                        Console.WriteLine(strText);
-                    }
-                    reader.Close();
+                //        s = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
+                //        strText = strText + s;
+                //        //File.WriteAllText(output, strText);
+                //        Console.WriteLine(strText);
+                //    }
+                //    reader.Close();
 
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
+                //}
+                //catch (Exception ex)
+                //{
+                //    Console.WriteLine(ex.ToString());
+                //}
+                DocConverter.PDF(input);
             }
         }
     }
