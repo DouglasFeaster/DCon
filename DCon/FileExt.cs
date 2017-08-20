@@ -9,27 +9,33 @@ namespace DCon
 {
     public static class FileExt
     {
+        private static string _fileExtFile = "OfficeFileExt.xml";
+
         public static bool IsWord(string input)
         {
+            string ext = String.Empty;
             // Start with XmlReader object
-            //here, we try to setup Stream between the XML file nad xmlReader
-            using (XmlReader reader = XmlReader.Create("OfficeFileExt.xml"))
+            // Here, we try to setup Stream between the XML file and xmlReader
+            using (XmlReader reader = XmlReader.Create(_fileExtFile))
             {
                 while (reader.Read())
                 {
                     if (reader.IsStartElement())
                     {
-                        if (reader.Name.ToString() == "Extension")
+                        if (reader.Name.ToString() == "Word")
                         {
-                            Console.WriteLine(reader.ReadString());
+                            if (reader.Name.ToString() == "Extension")
+                            {
+                                Console.WriteLine(reader.ReadString());
+                                ext = reader.ReadString();
+                            }
                         }
+                        
                     }
                 }
             }
 
-            if (input.ToUpper().Contains(".DOCX") || input.ToUpper().Contains(".DOC") 
-                || input.ToUpper().Contains(".RTF") || input.ToUpper().Contains(".DOT") 
-                || input.ToUpper().Contains(".ODT"))
+            if (input.ToUpper().Contains(ext.ToUpper()))
             {
                 return true;
             }
@@ -41,7 +47,29 @@ namespace DCon
 
         public static bool IsExcel(string input)
         {
-            if (input.ToUpper().Contains(".XLSX") || input.ToUpper().Contains(".XLS") || input.ToUpper().Contains(".ODS") || input.ToUpper().Contains(".CSV"))
+            string ext = String.Empty;
+            // Start with XmlReader object
+            // Here, we try to setup Stream between the XML file and xmlReader
+            using (XmlReader reader = XmlReader.Create(_fileExtFile))
+            {
+                while (reader.Read())
+                {
+                    if (reader.IsStartElement())
+                    {
+                        if (reader.Name.ToString() == "Excel")
+                        {
+                            if (reader.Name.ToString() == "Extension")
+                            {
+                                Console.WriteLine(reader.ReadString());
+                                ext = reader.ReadString();
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            if (input.ToUpper().Contains(ext.ToUpper()))
             {
                 return true;
             }
@@ -53,7 +81,28 @@ namespace DCon
 
         public static bool IsPowerPoint(string input)
         {
-            if (input.Contains(".PPTX") || input.Contains(".PPT"))
+            string ext = String.Empty;
+            // Start with XmlReader object
+            // Here, we try to setup Stream between the XML file and xmlReader
+            using (XmlReader reader = XmlReader.Create(_fileExtFile))
+            {
+                while (reader.Read())
+                {
+                    if (reader.IsStartElement())
+                    {
+                        if (reader.Name.ToString() == "Power")
+                        {
+                            if (reader.Name.ToString() == "Extension")
+                            {
+                                ext = reader.ReadString();
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            if (input.ToUpper().Contains(ext.ToUpper()))
             {
                 return true;
             }
@@ -65,7 +114,28 @@ namespace DCon
 
         public static bool IsPDF(string input)
         {
-            if (input.ToUpper().Contains(".PDF"))
+            string ext = String.Empty;
+            // Start with XmlReader object
+            // Here, we try to setup Stream between the XML file and xmlReader
+            using (XmlReader reader = XmlReader.Create(_fileExtFile))
+            {
+                while (reader.Read())
+                {
+                    if (reader.IsStartElement())
+                    {
+                        if (reader.Name.ToString() == "PDF")
+                        {
+                            if (reader.Name.ToString() == "Extension")
+                            {
+                                ext = reader.ReadString();
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            if (input.ToUpper().Contains(ext.ToUpper()))
             {
                 return true;
             }
