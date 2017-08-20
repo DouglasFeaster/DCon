@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,22 @@ namespace DCon
     {
         public static bool IsWord(string input)
         {
+            // Start with XmlReader object
+            //here, we try to setup Stream between the XML file nad xmlReader
+            using (XmlReader reader = XmlReader.Create("OfficeFileExt.xml"))
+            {
+                while (reader.Read())
+                {
+                    if (reader.IsStartElement())
+                    {
+                        if (reader.Name.ToString() == "Extension")
+                        {
+                            Console.WriteLine(reader.ReadString());
+                        }
+                    }
+                }
+            }
+
             if (input.ToUpper().Contains(".DOCX") || input.ToUpper().Contains(".DOC") 
                 || input.ToUpper().Contains(".RTF") || input.ToUpper().Contains(".DOT") 
                 || input.ToUpper().Contains(".ODT"))

@@ -9,26 +9,34 @@ namespace DCon
     {
         static void Main(string[] args)
         {
-            if (HelpCommand.IsHelp(args[0]))
+            try
+            {
+                if (HelpCommand.IsHelp(args[0]))
+                {
+                    HelpCommand.GetHelp();
+                }
+                else if (FileExt.IsWord(args[0]))
+                {
+                    DocConverter.Word(args[0]);
+                }
+                else if (FileExt.IsExcel(args[0]))
+                {
+                    DocConverter.Excel(args[0]);
+                }
+                else if (FileExt.IsPowerPoint(args[0]))
+                {
+                
+                }
+                else if (FileExt.IsPDF(args[0]))
+                {
+                    DocConverter.PDF(args[0]);
+                }
+            }
+            catch
             {
                 HelpCommand.GetHelp();
             }
-            else if (FileExt.IsWord(args[0]))
-            {
-                DocConverter.Word(args[0]);
-            }
-            else if (FileExt.IsExcel(args[0]))
-            {
-                DocConverter.Excel(args[0]);
-            }
-            else if (FileExt.IsPowerPoint(args[0]))
-            {
-                
-            }
-            else if (FileExt.IsPDF(args[0]))
-            {
-                DocConverter.PDF(args[0]);
-            }
+            
         }
     }
 }
