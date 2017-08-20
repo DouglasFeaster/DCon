@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,27 @@ using Excel = Microsoft.Office.Interop.Excel;
 using Power = Microsoft.Office.Interop.PowerPoint;
 using iPDF = iTextSharp.text.pdf;
 
+
 namespace DCon
 {
     class DocConverter
     {
         public static void Word(string input)
         {
+
+            string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
+
+            Word.Application app = new Word.Application();
+
+            try
+            {
+                Word.Document document = app.Documents.Open(doc);
+                Console.WriteLine(document.Content.Text.ToString());
+            }
+            finally
+            {
+                app.Quit();
+            }
         }
 
         public static void Excel(string input)
