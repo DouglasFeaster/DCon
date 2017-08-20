@@ -1,0 +1,5 @@
+[diff "dcon"]
+  textconv=dcon
+  prompt = false
+[alias]
+  bindiff = diff --word-diff=color --unified=1

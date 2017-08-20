@@ -1,0 +1,28 @@
+# .gitattributes file in root folder of your git project
+*.doc   diff=sconvert
+*.DOC   diff=sconvert
+
+*.docx  diff=sconvert
+*.DOCX  diff=sconvert
+
+*.rtf diff=sconvert
+*.RTF diff=sconvert
+
+*.xlsx diff=sconvert
+*.XLSX diff=sconvert
+
+*.xls diff=sconvert
+*.XLS diff=sconvert
+
+*.pdf diff=sconvert
+*.PDF diff=sconvert
+
+*.xps   diff=sconvert
+*.XPS   diff=sconvert
+
+*.odt   diff=sconvert
+*.ODT   diff=sconvert
+
+*.dot   diff=sconvert
+*.DOT   diff=sconvert
+
