@@ -24,7 +24,7 @@ namespace DCon
 
         public static bool IsExcel(string input)
         {
-            if (input.ToUpper().Contains(".XLSX") || input.ToUpper().Contains(".XLS"))
+            if (input.ToUpper().Contains(".XLSX") || input.ToUpper().Contains(".XLS") || input.ToUpper().Contains(".ODS") || input.ToUpper().Contains(".CSV"))
             {
                 return true;
             }

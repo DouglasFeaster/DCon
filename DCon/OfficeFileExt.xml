@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Office>
+  <Word>
+    <Extension>.docx</Extension>
+    <Extension>.docm</Extension>
+    <Extension>.doc</Extension>
+    <Extension>.dotx</Extension>
+    <Extension>.dotm</Extension>
+    <Extension>.dot</Extension>
+    <Extension>.rtf</Extension>
+    <Extension>.odt</Extension>
+  </Word>
+  <Excel>
+    <Extension>.xlsx</Extension>
+    <Extension>.xlsm</Extension>
+    <Extension>.xlsb</Extension>
+    <Extension>.xls</Extension>
+    <Extension>.csv</Extension>
+    <Extension>.xltx</Extension>
+    <Extension>.xltm</Extension>
+    <Extension>.xlt</Extension>
+    <Extension>.ods</Extension>
+  </Excel>
+  <Power>
+    <Extension>.pptx</Extension>
+    <Extension>.pptm</Extension>
+    <Extension>.ppt</Extension>
+    <Extension>.potx</Extension>
+    <Extension>.potm</Extension>
+    <Extension>.pot</Extension>
+    <Extension>.ppsx</Extension>
+    <Extension>.ppsm</Extension>
+    <Extension>.pps</Extension>
+    <Extension>.odp</Extension>
+  </Power>
+  <PDF>
+    <Extension>.pdf</Extension>
+  </PDF>
+</Office>
