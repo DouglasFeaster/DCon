@@ -2,4 +2,4 @@
   textconv=dcon
   prompt = false
 [alias]
-  bindiff = diff --word-diff=color --unified=1
+  docdiff = diff --word-diff=color --unified=1
