@@ -33,12 +33,9 @@ namespace DCon
                 {
                     if (reader.IsStartElement())
                     {
-                        if (reader.Name.ToString() == "Examples")
+                        if (reader.Name.ToString() == "Example")
                         {
-                            if (reader.Name.ToString() == "Example")
-                            {
-                                Console.WriteLine(reader.ReadString());
-                            }
+                            Console.WriteLine(reader.ReadString());
                         }
                     }
                 }

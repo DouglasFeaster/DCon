@@ -26,7 +26,6 @@ namespace DCon
                         {
                             if (reader.Name.ToString() == "Extension")
                             {
-                                Console.WriteLine(reader.ReadString());
                                 ext = reader.ReadString();
                             }
                         }
@@ -60,7 +59,6 @@ namespace DCon
                         {
                             if (reader.Name.ToString() == "Extension")
                             {
-                                Console.WriteLine(reader.ReadString());
                                 ext = reader.ReadString();
                             }
                         }
