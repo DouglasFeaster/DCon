@@ -10,22 +10,52 @@ namespace DCon
     {
         public static bool IsWord(string input)
         {
-            return;
+            if (input.ToUpper().Contains(".DOCX") || input.ToUpper().Contains(".DOC") 
+                || input.ToUpper().Contains(".RTF") || input.ToUpper().Contains(".DOT") 
+                || input.ToUpper().Contains(".ODT"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static bool IsExcel(string input)
         {
-            return;
+            if (input.ToUpper().Contains(".XLSX") || input.ToUpper().Contains(".XLS"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static bool IsPowerPoint(string input)
         {
-            return;
+            if (input.Contains(".PPTX") || input.Contains(".PPT"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static bool IsPDF(string input)
         {
-            return;
+            if (input.ToUpper().Contains(".PDF"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

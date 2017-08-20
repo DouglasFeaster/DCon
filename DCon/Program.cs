@@ -13,19 +13,19 @@ namespace DCon
             {
                 HelpCommand.GetHelp();
             }
-            else if (args[0].ToUpper().Contains(".DOCX") || args[0].ToUpper().Contains(".DOC") || args[0].ToUpper().Contains(".RTF") || args[0].ToUpper().Contains(".DOT") || args[0].ToUpper().Contains(".ODT"))
+            else if (FileExt.IsWord(args[0]))
             {
                 DocConverter.Word(args[0]);
             }
-            else if (args[0].ToUpper().Contains(".XLSX") || args[0].ToUpper().Contains(".XLS"))
+            else if (FileExt.IsExcel(args[0]))
             {
                 DocConverter.Excel(args[0]);
             }
-            else if (args[0].Contains(".pptx") || args[0].Contains(".ppt"))
+            else if (FileExt.IsPowerPoint(args[0]))
             {
                 
             }
-            else if (args[0].ToUpper().Contains(".PDF"))
+            else if (FileExt.IsPDF(args[0]))
             {
                 DocConverter.PDF(args[0]);
             }
