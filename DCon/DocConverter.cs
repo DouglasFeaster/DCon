@@ -35,6 +35,30 @@ namespace DCon
 
         public static void Excel(string input)
         {
+            string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
+
+            Excel.Application app = new Excel.Application();
+
+            try
+            {
+                app.DisplayAlerts = false;
+                app.Visible = false;
+
+                Excel.Workbook book = app.Workbooks.Open(doc);
+
+                Excel.Worksheet worksheet = book.ActiveSheet;
+                Excel.Range xlRange = worksheet.UsedRange;
+
+                foreach (Excel.Range cell in xlRange.Cells)
+                {
+                    Console.WriteLine(cell.Value2.ToString());
+                }
+
+            }
+            finally
+            {
+                app.Quit();
+            }
         }
 
         public static void PowerPoint(string input)

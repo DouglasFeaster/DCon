@@ -24,35 +24,7 @@ namespace DCon
             }
             else if (args[0].ToUpper().Contains(".XLSX") || args[0].ToUpper().Contains(".XLS"))
             {
-
-                string input = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), args[0]));
-                //string output = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), args[1]));
-
-                Excel.Application app = new Excel.Application();
-
-                try
-                {
-                    app.DisplayAlerts = false;
-                    app.Visible = false;
-
-                    Excel.Workbook book = app.Workbooks.Open(input);
-                    //book.SaveAs(output, XlFileFormat.xlTextWindows);
-
-                    Excel.Worksheet worksheet = book.ActiveSheet;
-                    Excel.Range xlRange = worksheet.UsedRange;
-
-                    //Console.WriteLine(xlRange.Cells.Value2.ToString());
-
-                    foreach (Excel.Range s in xlRange.Cells)
-                    {
-                        Console.WriteLine(s.Value2.ToString());
-                    }
-
-                }
-                finally
-                {
-                    app.Quit();
-                }
+                DocConverter.Excel(args[0]);
             }
 
             //else if (args[0].Contains(".pptx") || args[0].Contains(".ppt"))
