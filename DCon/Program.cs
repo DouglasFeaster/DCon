@@ -2,11 +2,6 @@
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Office.Interop;
-using Word = Microsoft.Office.Interop.Word;
-using Excel = Microsoft.Office.Interop.Excel;
-using Power = Microsoft.Office.Interop.PowerPoint;
-using iTextSharp.text.pdf;
 
 namespace DCon
 {
@@ -26,13 +21,11 @@ namespace DCon
             {
                 DocConverter.Excel(args[0]);
             }
+            else if (args[0].Contains(".pptx") || args[0].Contains(".ppt"))
+            {
 
-            //else if (args[0].Contains(".pptx") || args[0].Contains(".ppt"))
-            //{
 
-
-            //}
-
+            }
             else if (args[0].ToUpper().Contains(".PDF"))
             {
                 DocConverter.PDF(args[0]);

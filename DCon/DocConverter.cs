@@ -63,7 +63,6 @@ namespace DCon
 
         public static void PowerPoint(string input)
         {
-
             //    string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
 
             //    Microsoft.Office.Interop.PowerPoint.Application app = new Microsoft.Office.Interop.PowerPoint.Application();
