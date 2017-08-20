@@ -25,7 +25,6 @@ namespace DCon
                                 ext = reader.ReadString();
                             }
                         }
-                        
                     }
                 }
             }
@@ -58,7 +57,6 @@ namespace DCon
                                 ext = reader.ReadString();
                             }
                         }
-
                     }
                 }
             }
@@ -91,7 +89,6 @@ namespace DCon
                                 ext = reader.ReadString();
                             }
                         }
-
                     }
                 }
             }
@@ -124,7 +121,6 @@ namespace DCon
                                 ext = reader.ReadString();
                             }
                         }
-
                     }
                 }
             }

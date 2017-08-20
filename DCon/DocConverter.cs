@@ -50,7 +50,6 @@ namespace DCon
                 {
                     Console.WriteLine(cell.Value2.ToString());
                 }
-
             }
             finally
             {
@@ -90,8 +89,8 @@ namespace DCon
                     doc = doc + parseString;
                     Console.WriteLine(doc);
                 }
-                reader.Close();
 
+                reader.Close();
             }
             catch (Exception ex)
             {

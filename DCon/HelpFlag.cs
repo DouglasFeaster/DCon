@@ -15,7 +15,6 @@ namespace DCon
             {
                 return false;
             }
-            
         }
 
         public static void GetHelp()

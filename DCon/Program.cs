@@ -36,7 +36,6 @@ namespace DCon
             {
                 HelpFlag.GetHelp();
             }
-            
         }
     }
 }
