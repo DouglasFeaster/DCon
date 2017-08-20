@@ -11,9 +11,9 @@ namespace DCon
         {
             try
             {
-                if (HelpCommand.IsHelp(args[0]))
+                if (HelpFlag.IsHelp(args[0]))
                 {
-                    HelpCommand.GetHelp();
+                    HelpFlag.GetHelp();
                 }
                 else if (FileExt.IsWord(args[0]))
                 {
@@ -34,7 +34,7 @@ namespace DCon
             }
             catch
             {
-                HelpCommand.GetHelp();
+                HelpFlag.GetHelp();
             }
             
         }

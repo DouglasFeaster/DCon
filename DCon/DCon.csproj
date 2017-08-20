@@ -96,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileExt.cs" />
-    <Compile Include="HelpCommand.cs" />
+    <Compile Include="HelpFlag.cs" />
     <Compile Include="DocConverter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
