@@ -6,7 +6,8 @@ namespace DCon
 {
     public static class HelpFlag
     {
-        private static string _helpFile = @"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\HelpDocs.xml";
+        //TODO: Fix Absolute Path and change to install Path
+        private static string _helpFile = "HelpDocs.xml"; //@"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\HelpDocs.xml"
 
         public static bool IsHelp(string input)
         {
@@ -22,20 +23,29 @@ namespace DCon
 
         public static void GetHelp()
         {
-            // Start with XmlReader object
-            // Here, we try to setup Stream between the XML file and xmlReader
-            using (XmlReader reader = XmlReader.Create(_helpFile))
+            try
             {
-                while (reader.Read())
+
+            
+                // Start with XmlReader object
+                // Here, we try to setup Stream between the XML file and xmlReader
+                using (XmlReader reader = XmlReader.Create(_helpFile))
                 {
-                    if (reader.IsStartElement())
+                    while (reader.Read())
                     {
-                        if (reader.Name.ToString() == "Example")
+                        if (reader.IsStartElement())
                         {
-                            Console.WriteLine(reader.ReadString());
+                            if (reader.Name.ToString() == "Example")
+                            {
+                                Console.WriteLine(reader.ReadString());
+                            }
                         }
                     }
                 }
+            }
+            catch
+            {
+                Console.WriteLine("Error Occurred when accessing " + _helpFile);
             }
         }
     }

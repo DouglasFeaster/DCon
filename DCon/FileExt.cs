@@ -6,28 +6,37 @@ namespace DCon
 {
     public static class FileExt
     {
-        private static string _fileExtFile = @"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\OfficeFileExt.xml";
+        //TODO: Fix Absolute Path and change to install Path
+        private static string _fileExtFile = "OfficeFileExt.xml"; //@"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\OfficeFileExt.xml"
 
         public static bool IsWord(string input)
         {
             string ext = String.Empty;
-            // Start with XmlReader object
-            // Here, we try to setup Stream between the XML file and xmlReader
-            using (XmlReader reader = XmlReader.Create(_fileExtFile))
+
+            try
             {
-                while (reader.Read())
+                // Start with XmlReader object
+                // Here, we try to setup Stream between the XML file and xmlReader
+                using (XmlReader reader = XmlReader.Create(_fileExtFile))
                 {
-                    if (reader.IsStartElement())
+                    while (reader.Read())
                     {
-                        if (reader.Name.ToString() == "Word")
+                        if (reader.IsStartElement())
                         {
-                            if (reader.Name.ToString() == "Extension")
+                            if (reader.Name.ToString() == "Word")
                             {
-                                ext = reader.ReadString();
+                                if (reader.Name.ToString() == "Extension")
+                                {
+                                    ext = reader.ReadString();
+                                }
                             }
                         }
                     }
                 }
+            }
+            catch
+            {
+                Console.WriteLine("Error Occurred when accessing " + _fileExtFile);
             }
 
             if (input.ToUpper().Contains(ext.ToUpper()))
@@ -43,23 +52,31 @@ namespace DCon
         public static bool IsExcel(string input)
         {
             string ext = String.Empty;
-            // Start with XmlReader object
-            // Here, we try to setup Stream between the XML file and xmlReader
-            using (XmlReader reader = XmlReader.Create(_fileExtFile))
+
+            try
             {
-                while (reader.Read())
+                // Start with XmlReader object
+                // Here, we try to setup Stream between the XML file and xmlReader
+                using (XmlReader reader = XmlReader.Create(_fileExtFile))
                 {
-                    if (reader.IsStartElement())
+                    while (reader.Read())
                     {
-                        if (reader.Name.ToString() == "Excel")
+                        if (reader.IsStartElement())
                         {
-                            if (reader.Name.ToString() == "Extension")
+                            if (reader.Name.ToString() == "Excel")
                             {
-                                ext = reader.ReadString();
+                                if (reader.Name.ToString() == "Extension")
+                                {
+                                    ext = reader.ReadString();
+                                }
                             }
                         }
                     }
                 }
+            }
+            catch
+            {
+                Console.WriteLine("Error Occurred when accessing " + _fileExtFile);
             }
 
             if (input.ToUpper().Contains(ext.ToUpper()))
@@ -75,23 +92,31 @@ namespace DCon
         public static bool IsPowerPoint(string input)
         {
             string ext = String.Empty;
-            // Start with XmlReader object
-            // Here, we try to setup Stream between the XML file and xmlReader
-            using (XmlReader reader = XmlReader.Create(_fileExtFile))
+
+            try
             {
-                while (reader.Read())
+                // Start with XmlReader object
+                // Here, we try to setup Stream between the XML file and xmlReader
+                using (XmlReader reader = XmlReader.Create(_fileExtFile))
                 {
-                    if (reader.IsStartElement())
+                    while (reader.Read())
                     {
-                        if (reader.Name.ToString() == "Power")
+                        if (reader.IsStartElement())
                         {
-                            if (reader.Name.ToString() == "Extension")
+                            if (reader.Name.ToString() == "Power")
                             {
-                                ext = reader.ReadString();
+                                if (reader.Name.ToString() == "Extension")
+                                {
+                                    ext = reader.ReadString();
+                                }
                             }
                         }
                     }
                 }
+            }
+            catch
+            {
+                Console.WriteLine("Error Occurred when accessing " + _fileExtFile);
             }
 
             if (input.ToUpper().Contains(ext.ToUpper()))
@@ -107,23 +132,31 @@ namespace DCon
         public static bool IsPDF(string input)
         {
             string ext = String.Empty;
-            // Start with XmlReader object
-            // Here, we try to setup Stream between the XML file and xmlReader
-            using (XmlReader reader = XmlReader.Create(_fileExtFile))
+
+            try
             {
-                while (reader.Read())
+                // Start with XmlReader object
+                // Here, we try to setup Stream between the XML file and xmlReader
+                using (XmlReader reader = XmlReader.Create(_fileExtFile))
                 {
-                    if (reader.IsStartElement())
+                    while (reader.Read())
                     {
-                        if (reader.Name.ToString() == "PDF")
+                        if (reader.IsStartElement())
                         {
-                            if (reader.Name.ToString() == "Extension")
+                            if (reader.Name.ToString() == "PDF")
                             {
-                                ext = reader.ReadString();
+                                if (reader.Name.ToString() == "Extension")
+                                {
+                                    ext = reader.ReadString();
+                                }
                             }
                         }
                     }
                 }
+            }
+            catch
+            {
+                Console.WriteLine("Error Occurred when accessing " + _fileExtFile);
             }
 
             if (input.ToUpper().Contains(ext.ToUpper()))
