@@ -1,11 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Xml;
 
 namespace DCon
 {
     public static class FileExt
     {
-        private static string _fileExtFile = "OfficeFileExt.xml";
+        private static string _fileExtFile = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "OfficeFileExt.xml"));
 
         public static bool IsWord(string input)
         {

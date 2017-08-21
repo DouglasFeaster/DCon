@@ -1,10 +1,13 @@
 ﻿using System;
+using System.IO;
 using System.Xml;
 
 namespace DCon
 {
     public static class HelpFlag
     {
+        private static string _helpFile = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "HelpDocs.xml"));
+
         public static bool IsHelp(string input)
         {
             if (input.ToUpper() == "-HELP" || input.ToUpper() == "-H")
@@ -21,7 +24,7 @@ namespace DCon
         {
             // Start with XmlReader object
             // Here, we try to setup Stream between the XML file and xmlReader
-            using (XmlReader reader = XmlReader.Create("HelpDocs.xml"))
+            using (XmlReader reader = XmlReader.Create(_helpFile))
             {
                 while (reader.Read())
                 {
