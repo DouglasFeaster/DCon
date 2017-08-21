@@ -6,7 +6,7 @@ namespace DCon
 {
     public static class FileExt
     {
-        private static string _fileExtFile = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "OfficeFileExt.xml"));
+        private static string _fileExtFile = @"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\OfficeFileExt.xml";
 
         public static bool IsWord(string input)
         {

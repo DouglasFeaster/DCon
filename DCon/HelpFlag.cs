@@ -6,7 +6,7 @@ namespace DCon
 {
     public static class HelpFlag
     {
-        private static string _helpFile = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "HelpDocs.xml"));
+        private static string _helpFile = @"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\HelpDocs.xml";
 
         public static bool IsHelp(string input)
         {
