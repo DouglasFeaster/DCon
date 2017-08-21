@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Xml;
 
 namespace DCon
@@ -7,7 +6,7 @@ namespace DCon
     public static class FileExt
     {
         //TODO: Fix Absolute Path and change to install Path
-        private static string _fileExtFile = "OfficeFileExt.xml"; //@"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\OfficeFileExt.xml"
+        private static string _fileExtFile = @"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\OfficeFileExt.xml";
 
         public static bool IsWord(string input)
         {
