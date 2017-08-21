@@ -1,6 +1,7 @@
 # Document Converter
 
-Console Application for converting binary document files to text for Git Diff. Add dcon directory to PATH variable.
+Console Application for converting Microsoft Office files to text for Git Diff. Add dcon directory to PATH variable.
+Requires Microsoft Office
 
 .gitconfig
 ```git
