@@ -111,7 +111,6 @@
     <Content Include=".gitattributes" />
     <Content Include="HelpDocs.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </Content>
     <Content Include="OfficeFileExt.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
