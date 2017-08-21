@@ -15,8 +15,20 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_046F12C76B9D4A849FF5AFB3E2A0094F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_08B381BC0955A68B3F13DD3E4C295C0C"
         "OwnerKey" = "8:_96C841B5C375415EB9D36BC70FC64048"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6F79C66A265449F680B0553F2E1465BD"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -128,6 +140,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_046F12C76B9D4A849FF5AFB3E2A0094F"
+            {
+            "SourcePath" = "8:..\\DCon\\OfficeFileExt.xml"
+            "TargetName" = "8:OfficeFileExt.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_7042B0A0D42E494D84BA57B50B3EB1B6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_08B381BC0955A68B3F13DD3E4C295C0C"
             {
             "AssemblyRegister" = "3:1"
@@ -157,6 +189,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F79C66A265449F680B0553F2E1465BD"
+            {
+            "SourcePath" = "8:..\\DCon\\HelpDocs.xml"
+            "TargetName" = "8:HelpDocs.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_7042B0A0D42E494D84BA57B50B3EB1B6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D5F68778BB8EECAE02DA2664B97077DB"
@@ -247,7 +299,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Document Converter"
         "ProductCode" = "8:{7D4F7B48-C9C7-404B-99F1-64DF32C3437F}"
-        "PackageCode" = "8:{258F376E-9172-4B24-843C-8B5DA61D7798}"
+        "PackageCode" = "8:{D8F9A338-7EAD-4F71-AED4-09D0EE425C4B}"
         "UpgradeCode" = "8:{4ED2C4F3-FA3C-40D2-AFBD-E9391A845E34}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
