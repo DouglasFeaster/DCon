@@ -5,8 +5,7 @@ namespace DCon
 {
     public static class FileExt
     {
-        //TODO: Fix Absolute Path and change to install Path
-        private static string _fileExtFile = @"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\OfficeFileExt.xml";
+        private static string _fileExtFile = @"C:\Program Files (x86)\Johnson University\Document Converter\OfficeFileExt.xml";
 
         public static bool IsWord(string input)
         {

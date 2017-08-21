@@ -5,8 +5,7 @@ namespace DCon
 {
     public static class HelpFlag
     {
-        //TODO: Fix Absolute Path and change to install Path
-        private static string _helpFile = @"C:\Users\Douglas\Documents\Visual Studio 2017\Projects\DCon\DCon\HelpDocs.xml"; 
+        private static string _helpFile = @"C:\Program Files (x86)\Johnson University\Document Converter\HelpDocs.xml"; 
 
         public static bool IsHelp(string input)
         {
