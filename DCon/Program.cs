@@ -9,8 +9,8 @@ namespace DCon
     {
         static void Main(string[] args)
         {
-            //try
-            //{
+            try
+            {
                 if (HelpFlag.IsHelp(args[0]))
                 {
                     HelpFlag.GetHelp();
@@ -31,11 +31,11 @@ namespace DCon
                 {
                     DocConverter.PDF(args[0]);
                 }
-            //}
-            //catch
-            //{
-            //    HelpFlag.GetHelp();
-            //}
         }
+            catch
+            {
+                HelpFlag.GetHelp();
+            }
+}
     }
 }
