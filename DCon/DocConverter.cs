@@ -46,9 +46,12 @@ namespace DCon
                 Excel.Worksheet worksheet = book.ActiveSheet;
                 Excel.Range xlRange = worksheet.UsedRange;
 
-                foreach (Excel.Range cell in xlRange.Cells)
+                foreach(Excel.Range column in xlRange.Columns)
                 {
-                    Console.WriteLine(cell.Value2.ToString());
+                    foreach (Excel.Range cell in xlRange.Cells)
+                    {
+                        Console.WriteLine(cell.Value2.ToString());
+                    }
                 }
             }
             finally
