@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml;
+using System.Collections.Generic;
 
 namespace DCon
 {
@@ -13,21 +14,19 @@ namespace DCon
 
             try
             {
-                // Start with XmlReader object
-                // Here, we try to setup Stream between the XML file and xmlReader
-                using (XmlReader reader = XmlReader.Create(_fileExtFile))
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(_fileExtFile);
+                XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes("/Office/Word");
+
+                foreach (XmlNode node in nodeList)
                 {
-                    while (reader.Read())
+                    foreach (XmlNode item in node.SelectNodes("Extension"))
                     {
-                        if (reader.IsStartElement())
+                        ext = item.InnerText;
+
+                        if (input.ToUpper().Contains(ext.ToUpper()))
                         {
-                            if (reader.Name.ToString() == "Word")
-                            {
-                                if (reader.Name.ToString() == "Extension")
-                                {
-                                    ext = reader.ReadString();
-                                }
-                            }
+                            break;
                         }
                     }
                 }
@@ -53,21 +52,19 @@ namespace DCon
 
             try
             {
-                // Start with XmlReader object
-                // Here, we try to setup Stream between the XML file and xmlReader
-                using (XmlReader reader = XmlReader.Create(_fileExtFile))
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(_fileExtFile);
+                XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes("/Office/Excel");
+
+                foreach (XmlNode node in nodeList)
                 {
-                    while (reader.Read())
+                    foreach (XmlNode item in node.SelectNodes("Extension"))
                     {
-                        if (reader.IsStartElement())
+                        ext = item.InnerText;
+
+                        if (input.ToUpper().Contains(ext.ToUpper()))
                         {
-                            if (reader.Name.ToString() == "Excel")
-                            {
-                                if (reader.Name.ToString() == "Extension")
-                                {
-                                    ext = reader.ReadString();
-                                }
-                            }
+                            break;
                         }
                     }
                 }
@@ -93,21 +90,19 @@ namespace DCon
 
             try
             {
-                // Start with XmlReader object
-                // Here, we try to setup Stream between the XML file and xmlReader
-                using (XmlReader reader = XmlReader.Create(_fileExtFile))
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(_fileExtFile);
+                XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes("/Office/Power");
+
+                foreach (XmlNode node in nodeList)
                 {
-                    while (reader.Read())
+                    foreach (XmlNode item in node.SelectNodes("Extension"))
                     {
-                        if (reader.IsStartElement())
+                        ext = item.InnerText;
+
+                        if (input.ToUpper().Contains(ext.ToUpper()))
                         {
-                            if (reader.Name.ToString() == "Power")
-                            {
-                                if (reader.Name.ToString() == "Extension")
-                                {
-                                    ext = reader.ReadString();
-                                }
-                            }
+                            break;
                         }
                     }
                 }
@@ -133,21 +128,19 @@ namespace DCon
 
             try
             {
-                // Start with XmlReader object
-                // Here, we try to setup Stream between the XML file and xmlReader
-                using (XmlReader reader = XmlReader.Create(_fileExtFile))
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(_fileExtFile);
+                XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes("/Office/PDF");
+
+                foreach (XmlNode node in nodeList)
                 {
-                    while (reader.Read())
+                    foreach (XmlNode item in node.SelectNodes("Extension"))
                     {
-                        if (reader.IsStartElement())
+                        ext = item.InnerText;
+
+                        if (input.ToUpper().Contains(ext.ToUpper()))
                         {
-                            if (reader.Name.ToString() == "PDF")
-                            {
-                                if (reader.Name.ToString() == "Extension")
-                                {
-                                    ext = reader.ReadString();
-                                }
-                            }
+                            break;
                         }
                     }
                 }
