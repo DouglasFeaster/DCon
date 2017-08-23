@@ -2,9 +2,9 @@
 using System.IO;
 using System.Text;
 
-using Word = Microsoft.Office.Interop.Word;
-using Excel = Microsoft.Office.Interop.Excel;
-using Power = Microsoft.Office.Interop.PowerPoint;
+using iWord = Microsoft.Office.Interop.Word;
+using iExcel = Microsoft.Office.Interop.Excel;
+using iPower = Microsoft.Office.Interop.PowerPoint;
 using iPDF = iTextSharp.text.pdf;
 
 
@@ -17,11 +17,11 @@ namespace DCon
 
             string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
 
-            Word.Application app = new Word.Application();
+            iWord.Application app = new iWord.Application();
 
             try
             {
-                Word.Document document = app.Documents.Open(doc);
+                iWord.Document document = app.Documents.Open(doc);
                 Console.WriteLine(document.Content.Text.ToString());
             }
             finally
@@ -34,25 +34,45 @@ namespace DCon
         {
             string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
 
-            Excel.Application app = new Excel.Application();
+            iExcel.Application app = new iExcel.Application();
 
             try
             {
                 app.DisplayAlerts = false;
                 app.Visible = false;
 
-                Excel.Workbook book = app.Workbooks.Open(doc);
+                iExcel.Workbook book = app.Workbooks.Open(doc);
 
-                Excel.Worksheet worksheet = book.ActiveSheet;
-                Excel.Range xlRange = worksheet.UsedRange;
+                iExcel.Worksheet worksheet = book.ActiveSheet;
+                iExcel.Range xlRange = worksheet.UsedRange;
 
-                foreach(Excel.Range column in xlRange.Columns)
+                object[,] valueArray = (object[,])xlRange.get_Value(
+                        iExcel.XlRangeValueDataType.xlRangeValueDefault);
+                
+                // iterate through each cell and display the contents.
+
+                string colLet = string.Empty;
+
+                for (int row = 1; row <= worksheet.UsedRange.Rows.Count; ++row)
                 {
-                    foreach (Excel.Range cell in xlRange.Cells)
+                    for (int col = 1; col <= worksheet.UsedRange.Columns.Count; ++col)
                     {
-                        Console.WriteLine(cell.Value2.ToString());
+                        // Print value of the cell to Console.
+                        if (col == 1)
+                        {
+                            colLet = "A";
+                            //Console.Write(colLet + row + ":" + valueArray[row, col].ToString() + " ");
+                        }
+                        else if (col == 2)
+                        {
+                            colLet = "B";
+                            //Console.Write(colLet + row + ":" + valueArray[row, col].ToString() + "\n");
+                        }
+                        Console.WriteLine(colLet + row + ":" + valueArray[row, col].ToString());
+                        //Console.WriteLine(col + ", "+ row);
                     }
                 }
+
             }
             finally
             {
