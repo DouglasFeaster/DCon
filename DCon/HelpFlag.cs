@@ -5,7 +5,11 @@ namespace DCon
 {
     public static class HelpFlag
     {
-        private static string _helpFile = @"C:\Program Files (x86)\Johnson University\Document Converter\HelpDocs.xml"; 
+#if DEBUG
+        private static string _helpFile = "HelpDocs.xml";
+#else
+        private static string _helpFile = @"C:\Program Files (x86)\Johnson University\Document Converter\HelpDocs.xml";
+#endif
 
         public static bool IsHelp(string input)
         {

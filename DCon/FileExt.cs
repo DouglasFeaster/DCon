@@ -5,8 +5,11 @@ namespace DCon
 {
     public static class FileExt
     {
+#if DEBUG
+        private static string _fileExtFile = "OfficeFileExt.xml";
+#else
         private static string _fileExtFile = @"C:\Program Files (x86)\Johnson University\Document Converter\OfficeFileExt.xml";
-
+#endif
         public static bool IsWord(string input)
         {
             string ext = String.Empty;
