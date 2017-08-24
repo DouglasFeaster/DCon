@@ -23,6 +23,8 @@ namespace DCon
             {
                 iWord.Document document = app.Documents.Open(doc);
                 Console.WriteLine(document.Content.Text.ToString());
+
+                app.Quit();
             }
             finally
             {
@@ -68,6 +70,7 @@ namespace DCon
                     }
                 }
                 book.Close();
+                app.Quit();
             }
             finally
             {
