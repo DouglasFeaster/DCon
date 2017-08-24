@@ -25,17 +25,17 @@ namespace DCon
                 }
                 else if (FileExt.IsPowerPoint(args[0]))
                 {
-                
+
                 }
                 else if (FileExt.IsPDF(args[0]))
                 {
                     DocConverter.PDF(args[0]);
                 }
-        }
+            }
             catch
             {
                 HelpFlag.GetHelp();
             }
-}
+        }
     }
 }

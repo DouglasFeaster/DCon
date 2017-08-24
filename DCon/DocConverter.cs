@@ -68,11 +68,18 @@ namespace DCon
                             colLet = "B";
                             //Console.Write(colLet + row + ":" + valueArray[row, col].ToString() + "\n");
                         }
-                        Console.WriteLine(colLet + row + ":" + valueArray[row, col].ToString());
-                        //Console.WriteLine(col + ", "+ row);
+                        
+                        try
+                        {
+                            Console.WriteLine(colLet + row + ":" + valueArray[row, col].ToString());
+                        }
+                        catch
+                        {
+                            Console.WriteLine(colLet + row + ": ");
+                        }
                     }
                 }
-
+                book.Close();
             }
             finally
             {
