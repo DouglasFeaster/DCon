@@ -56,26 +56,14 @@ namespace DCon
                 for (int row = 1; row <= worksheet.UsedRange.Rows.Count; ++row)
                 {
                     for (int col = 1; col <= worksheet.UsedRange.Columns.Count; ++col)
-                    {
-                        // Print value of the cell to Console.
-                        if (col == 1)
-                        {
-                            colLet = "A";
-                            //Console.Write(colLet + row + ":" + valueArray[row, col].ToString() + " ");
-                        }
-                        else if (col == 2)
-                        {
-                            colLet = "B";
-                            //Console.Write(colLet + row + ":" + valueArray[row, col].ToString() + "\n");
-                        }
-                        
+                    { 
                         try
                         {
-                            Console.WriteLine(colLet + row + ":" + valueArray[row, col].ToString());
+                            Console.WriteLine(ColumnLetters.GetLetter(col) + row + ":" + valueArray[row, col].ToString());
                         }
                         catch
                         {
-                            Console.WriteLine(colLet + row + ": ");
+                            Console.WriteLine(ColumnLetters.GetLetter(col) + row + ": ");
                         }
                     }
                 }
