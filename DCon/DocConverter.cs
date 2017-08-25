@@ -6,7 +6,7 @@ using iWord = Microsoft.Office.Interop.Word;
 using iExcel = Microsoft.Office.Interop.Excel;
 using iPower = Microsoft.Office.Interop.PowerPoint;
 using iPDF = iTextSharp.text.pdf;
-
+using Microsoft.Office.Core;
 
 namespace DCon
 {
@@ -96,9 +96,9 @@ namespace DCon
         /// <param name="input">Input File Path</param>
         public static void PowerPoint(string input)
         {
-            //    string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
+            string pres = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
 
-            //    Microsoft.Office.Interop.PowerPoint.Application app = new Microsoft.Office.Interop.PowerPoint.Application();
+            //    iPower.Application app = new iPower.Application();
 
             //    try
             //    {
@@ -108,6 +108,47 @@ namespace DCon
             //    {
             //        app.Quit();
             //    }
+            var stringBuilder = new StringBuilder();
+
+            iPower.Application app = new iPower.Application();
+            iPower.Presentations multi_presentations = app.Presentations;
+            iPower.Presentation presentation = multi_presentations.Open(pres);
+            iPower.Slides slides = presentation.Slides;
+            try
+            {
+                if (slides != null)
+                {
+                    var slidesCount = slides.Count;
+                    if (slidesCount > 0)
+                    {
+                        for (int slideIndex = 1; slideIndex <= slidesCount; slideIndex++)
+                        {
+                            var slide = slides[slideIndex];
+                            foreach (iPower.Shape textShape in slide.Shapes)
+                            {
+                                if (textShape.HasTextFrame == MsoTriState.msoTrue &&
+                                            textShape.TextFrame.HasText == MsoTriState.msoTrue)
+                                {
+                                    iPower.TextRange textRange = textShape.TextFrame.TextRange;
+                                    if (textRange != null && textRange.Length > 0)
+                                    {
+                                        stringBuilder.Append(" " + textRange.Text + " Slide: #" + slide.SlideNumber);
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                presentation.Close();
+                app.Quit();
+                Console.WriteLine(stringBuilder.ToString());
+            }
+            finally
+            {
+                //app.Quit();
+            }
+            
         }
 
         /// <summary>
