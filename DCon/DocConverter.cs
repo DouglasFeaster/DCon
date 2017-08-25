@@ -132,8 +132,7 @@ namespace DCon
                                     iPower.TextRange textRange = textShape.TextFrame.TextRange;
                                     if (textRange != null && textRange.Length > 0)
                                     {
-                                        stringBuilder.Append(" " + textRange.Text + " Slide: #" + slide.SlideNumber);
-
+                                        Console.WriteLine(" (Slide #" + slide.SlideNumber + "): " + textRange.Text);
                                     }
                                 }
                             }
@@ -142,7 +141,7 @@ namespace DCon
                 }
                 presentation.Close();
                 app.Quit();
-                Console.WriteLine(stringBuilder.ToString());
+                
             }
             finally
             {
