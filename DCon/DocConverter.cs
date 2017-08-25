@@ -10,8 +10,16 @@ using iPDF = iTextSharp.text.pdf;
 
 namespace DCon
 {
+    /// <summary>
+    /// Document Converter Class
+    /// </summary>
     public static class DocConverter
     {
+
+        /// <summary>
+        /// Converts Word Document to Plain Text and Writes to Screen
+        /// </summary>
+        /// <param name="input">Input File Path</param>
         public static void Word(string input)
         {
 
@@ -32,6 +40,10 @@ namespace DCon
             }
         }
 
+        /// <summary>
+        /// Converts Excel Spreadsheet to Plain Text and Writes to Screen
+        /// </summary>
+        /// <param name="input">Input File Path</param>
         public static void Excel(string input)
         {
             string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
@@ -78,6 +90,10 @@ namespace DCon
             }
         }
 
+        /// <summary>
+        /// Converts PowerPoint Presentation to Plain Text and Writes to Screen
+        /// </summary>
+        /// <param name="input">Input File Path</param>
         public static void PowerPoint(string input)
         {
             //    string doc = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), input));
@@ -94,6 +110,10 @@ namespace DCon
             //    }
         }
 
+        /// <summary>
+        /// Converts PDF to Plain Text and Writes to Screen
+        /// </summary>
+        /// <param name="input">Input File Path</param>
         public static void PDF(string input)
         {
             string doc = string.Empty;

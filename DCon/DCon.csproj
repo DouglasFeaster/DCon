@@ -96,7 +96,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColumnLetters.cs" />
     <Compile Include="FileExt.cs" />
     <Compile Include="HelpFlag.cs" />
     <Compile Include="DocConverter.cs" />
