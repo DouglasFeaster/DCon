@@ -61,11 +61,11 @@ namespace DCon
                     { 
                         try
                         {
-                            Console.WriteLine(ColumnLetters.GetLetter(col) + row + ":" + valueArray[row, col].ToString());
+                            Console.WriteLine("Column: " + col + " Row: " + row + " : " + valueArray[row, col].ToString());
                         }
                         catch
                         {
-                            Console.WriteLine(ColumnLetters.GetLetter(col) + row + ": ");
+                            Console.WriteLine("Column: " + col + " Row: " + row + " : ");
                         }
                     }
                 }
