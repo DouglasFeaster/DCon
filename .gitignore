@@ -193,6 +193,7 @@ ClientBin/
 *.pfx
 *.publishsettings
 *.vdproj
+DConInstaller/
 node_modules/
 orleans.codegen.cs
 
